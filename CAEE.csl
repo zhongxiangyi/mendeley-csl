@@ -16,8 +16,10 @@
   <locale xml:lang="en">
     <terms>
       <term name="in press">in press</term>
-      <term name="editor" form="short">ed.</term>
-      <term name="editor" form="short" plural="true">eds.</term>
+      <term name="editor" form="short">
+        <single>ed.</single>
+        <multiple>eds.</multiple>
+      </term>
     </terms>
   </locale>
 
@@ -129,7 +131,7 @@
         <else-if type="paper-conference" match="any">
           <text macro="authors" suffix=", "/>
           <text macro="title-quoted" suffix=" "/>
-          <text value="in " suffix=""/>
+          <text value="in "/>
           <text variable="container-title" font-style="italic"/>
           <text macro="editors"/>
           <text variable="publisher-place" prefix=", "/>
@@ -143,7 +145,7 @@
         <else-if type="chapter" match="any">
           <text macro="authors" suffix=", "/>
           <text macro="title-quoted" suffix=" "/>
-          <text value="in " suffix=""/>
+          <text value="in "/>
           <text variable="container-title" font-style="italic"/>
           <text macro="editors"/>
           <text variable="publisher-place" prefix=", "/>
